@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meus agendamentos — Emi Belezaria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="agenda.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-inner">
+      <a class="marca" href="index.html"><img src="assets/logo.jpg" alt=""><span>emi belezaria</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuPrincipal">Menu</button>
+      <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendar.html">Agendar</a>
+        <a href="agendamentos.html" class="ativo" aria-current="page">Meus agendamentos</a>
+      </nav>
+      <div class="cliente-logada"></div>
+    </div>
+  </header>
+  <main id="minhaAgenda">
+    <header class="hero agenda-intro">
+      <h1>Meus agendamentos</h1>
+      <p>Consulte os detalhes dos seus atendimentos e gerencie os próximos horários.</p>
+      <a href="agendar.html" class="btn">Agendar horário</a>
+    </header>
+    <p id="aviso" class="aviso" role="status">Carregando agenda…</p>
+    <button class="btn secundario" id="tentar" type="button" hidden>Tentar novamente</button>
+    <div id="listas" hidden>
+      <section aria-labelledby="tituloProximos">
+        <h2 class="secao-titulo" id="tituloProximos">Agenda atual e próximos horários</h2>
+        <div id="proximos" class="lista-agenda"></div>
+      </section>
+      <section aria-labelledby="tituloHistorico">
+        <h2 class="secao-titulo" id="tituloHistorico">Histórico</h2>
+        <div id="historico" class="lista-agenda"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

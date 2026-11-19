@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Serviços — Emi Belezaria</title>
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-pagina="servicos">
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="topo-inner">
+    <a class="marca" href="index.html" aria-label="Emi Belezaria, início"><img src="assets/logo.jpg" alt=""><span>emi belezaria</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menuPrincipal" type="button">Menu</button>
+    <nav class="menu" id="menuPrincipal" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="servicos.html" class="ativo" aria-current="page">Serviços</a>
+      <a href="agendar.html">Agendar</a>
+      <a href="agendamentos.html">Meus agendamentos</a>
+    </nav>
+    <div class="cliente-logada"></div>
+  </div>
+</header>
+<main id="principal">
+  <div class="hero"><h1>Serviços do salão</h1><p>Consulte os preços, a duração e a profissional de cada atendimento.</p></div>
+  <div class="grid-servicos" id="catalogo" aria-live="polite"></div>
+</main>
+</body>
+</html>

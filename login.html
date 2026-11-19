@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Minha conta — Emi Belezaria</title>
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-pagina="login">
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="topo-inner">
+    <a class="marca" href="index.html" aria-label="Emi Belezaria, início"><img src="assets/logo.jpg" alt=""><span>emi belezaria</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menuPrincipal" type="button">Menu</button>
+    <nav class="menu" id="menuPrincipal" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="agendar.html">Agendar</a>
+      <a href="agendamentos.html">Meus agendamentos</a>
+    </nav>
+    <div class="cliente-logada"></div>
+  </div>
+</header>
+<main id="principal" class="conta">
+  <div class="login-card">
+    <h1 id="titulo-conta">Entrar na sua conta</h1>
+    <p class="orientacao" id="orientacao">Acesse sua agenda com o e-mail cadastrado.</p>
+    <noscript>Ative o JavaScript no navegador para entrar ou criar sua conta.</noscript>
+    <form id="form-conta" action="/api/login" method="post">
+      <div id="campo-nome" hidden>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" autocomplete="name" minlength="2" maxlength="80" disabled>
+      </div>
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="seunome@exemplo.com" required>
+      <label for="senha">Senha</label>
+      <input id="senha" name="senha" type="password" autocomplete="current-password" maxlength="128" required>
+      <p id="erro-conta" role="alert" class="aviso" hidden></p>
+      <button class="btn" id="enviar-conta">Entrar</button>
+    </form>
+    <p class="alternar-conta"><span id="pergunta-conta">Primeira visita?</span> <button class="btn texto" type="button" id="alternar-conta">Criar uma conta</button></p>
+  </div>
+</main>
+</body>
+</html>

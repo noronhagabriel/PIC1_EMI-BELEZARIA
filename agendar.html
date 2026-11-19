@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendar horário — Emi Belezaria</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="agenda.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-inner">
+      <a class="marca" href="index.html"><img src="assets/logo.jpg" alt=""><span>emi belezaria</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menuPrincipal">Menu</button>
+      <nav class="menu" id="menuPrincipal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="agendar.html" class="ativo" aria-current="page">Agendar</a>
+        <a href="agendamentos.html">Meus agendamentos</a>
+      </nav>
+      <div class="cliente-logada"></div>
+    </div>
+  </header>
+  <main id="marcacao">
+    <header class="hero agenda-intro">
+      <h1 id="titulo">Agendar horário</h1>
+      <p id="introducao">Escolha seu serviço e encontre um horário no salão.</p>
+    </header>
+    <p id="aviso" class="aviso" role="status">Carregando agenda…</p>
+    <button class="btn secundario" id="tentar" type="button" hidden>Tentar novamente</button>
+    <div id="fluxo" hidden>
+      <nav class="etapas" aria-label="Etapas do agendamento">
+        <span class="etapa-bolha">1. Serviço</span>
+        <span class="etapa-bolha">2. Profissional</span>
+        <span class="etapa-bolha">3. Data</span>
+        <span class="etapa-bolha">4. Horário</span>
+        <span class="etapa-bolha">5. Confirmação</span>
+      </nav>
+      <section class="passo" id="passo1">
+        <h2 class="secao-titulo" tabindex="-1">Escolha o serviço</h2>
+        <div id="servicos" class="opcoes"></div>
+        <div class="acoes-passo"><a href="servicos.html" class="btn secundario">Ver catálogo</a><button class="btn" id="avancar1" disabled>Próximo</button></div>
+      </section>
+      <section class="passo" id="passo2">
+        <h2 class="secao-titulo" tabindex="-1">Escolha a profissional</h2>
+        <div id="profissionais" class="opcoes"></div>
+        <div class="acoes-passo"><button class="btn secundario" data-voltar="1">Voltar</button><button class="btn" id="avancar2" disabled>Próximo</button></div>
+      </section>
+      <section class="passo" id="passo3">
+        <h2 class="secao-titulo" tabindex="-1">Escolha a data</h2>
+        <div class="card campo-data">
+          <label for="data">Data do atendimento</label>
+          <input type="date" id="data" required aria-describedby="periodo">
+          <p id="periodo"></p>
+        </div>
+        <div class="acoes-passo"><button class="btn secundario" id="voltarData" data-voltar="2">Voltar</button><a href="agendamentos.html" class="btn secundario" id="sairReagendamento" hidden>Manter agendamento</a><button class="btn" id="avancar3">Consultar horários</button></div>
+      </section>
+      <section class="passo" id="passo4">
+        <h2 class="secao-titulo" tabindex="-1">Escolha o horário</h2>
+        <p id="diaHorario"></p>
+        <div id="horarios" class="horarios"></div>
+        <div class="acoes-passo"><button class="btn secundario" data-voltar="3">Voltar</button><button class="btn" id="avancar4" disabled>Revisar</button></div>
+      </section>
+      <section class="passo" id="passo5">
+        <h2 class="secao-titulo" tabindex="-1">Confira os dados</h2>
+        <div class="card resumo">
+          <table aria-label="Resumo do atendimento"><tbody id="resumo"></tbody></table>
+          <div class="acoes-passo"><button class="btn secundario" data-voltar="4" id="voltarResumo">Voltar</button><button class="btn" id="confirmar">Confirmar agendamento</button></div>
+        </div>
+      </section>
+    </div>
+    <section class="card" id="sucesso" hidden>
+      <h2 id="conclusao" tabindex="-1"></h2>
+      <p id="comprovante"></p>
+      <div class="acoes"><a href="agendamentos.html" class="btn">Ver meus agendamentos</a><a href="agendar.html" class="btn secundario">Agendar outro serviço</a></div>
+    </section>
+  </main>
+</body>
+</html>

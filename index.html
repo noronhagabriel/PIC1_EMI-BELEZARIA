@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Início — Emi Belezaria</title>
+  <link rel="icon" href="assets/logo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-pagina="index">
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+<header class="topo">
+  <div class="topo-inner">
+    <a class="marca" href="index.html" aria-label="Emi Belezaria, início"><img src="assets/logo.jpg" alt=""><span>emi belezaria</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menuPrincipal" type="button">Menu</button>
+    <nav class="menu" id="menuPrincipal" aria-label="Principal">
+      <a href="index.html" class="ativo" aria-current="page">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="agendar.html">Agendar</a>
+      <a href="agendamentos.html">Meus agendamentos</a>
+    </nav>
+    <div class="cliente-logada"></div>
+  </div>
+</header>
+<main id="principal">
+  <section class="capa" aria-labelledby="boasvindas">
+    <div class="capa-texto">
+      <h1 id="boasvindas">Seu horário na<br><i>Emi Belezaria</i></h1>
+      <p>Escolha seu serviço de cabelo, unhas ou sobrancelhas e reserve um horário com a nossa equipe.</p>
+      <a class="btn" href="agendar.html">Agendar um horário</a>
+    </div>
+    <div class="assinatura"><img src="assets/logo.jpg" alt=""></div>
+  </section>
+  <section aria-labelledby="destaques">
+    <div class="secao-linha"><h2 id="destaques">Serviços em destaque</h2><a class="link" href="servicos.html">Ver todos os serviços</a></div>
+    <div class="grid-servicos" id="catalogo" aria-live="polite"></div>
+  </section>
+  <section id="proxima-secao" hidden aria-labelledby="titulo-proximo">
+    <div class="secao-linha"><h2 id="titulo-proximo">Seu próximo horário</h2><a class="link" href="agendamentos.html">Meus agendamentos</a></div>
+    <div class="card" id="proximo"></div>
+  </section>
+</main>
+</body>
+</html>
